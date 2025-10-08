@@ -1,6 +1,8 @@
 asgiref==3.9.2
 Django==5.2.6
-django-admin-honeypot==1.1.0
+django-admin-honeypot @ git+https://github.com/dmpayton/django-admin-honeypot.git@a840496d183df89965eeb33c9a5dd9ea3919dfff
+django-ipware==7.0.1
 django-ratelimit==4.1.0
+python-ipware==3.0.0
 sqlparse==0.5.3
 tzdata==2025.2
