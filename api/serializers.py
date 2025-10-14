@@ -1,9 +1,15 @@
 from rest_framework import serializers
-from models import Post, Category
+from ..models import Post, Category, Profile
 
 class UserSerializers(serializers.ModelSerializer):
-    pass
-
+    class Meta:
+        model = Profile
+        fields = [
+            'user',
+            'phone_number',
+            'birth_date',
+        ]
+        
 class PostSerializers(serializers.ModelSerializer):
     class Meta:
         model = Post
