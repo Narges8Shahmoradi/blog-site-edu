@@ -1,6 +1,11 @@
 from django.contrib import admin
-from .models import Post, Category
+from .models import Post, Category, Profile
 
+
+@admin.register(Profile)
+class ProfileAdmin(admin.ModelAdmin):
+    list_display = ['user', 'phone_number', 'birth_date']
+    raw_id_fields = ['user']
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     list_display = ['title', 'slug', 'author', 'publish', 'status']
