@@ -4,12 +4,12 @@ from ..models import Post, Category, Profile
 class UserSerializers(serializers.ModelSerializer):
     class Meta:
         model = Profile
+        #fields = '__all__'
         fields = [
             'user',
             'phone_number',
             'birth_date',
-        ]
-        
+        ] 
 class PostSerializers(serializers.ModelSerializer):
     class Meta:
         model = Post
@@ -21,7 +21,6 @@ class PostSerializers(serializers.ModelSerializer):
            'created',
            'status',
         ]
-
 class CategorySerializers(serializers.ModelSerializer):
     class Meta:
         model = Category

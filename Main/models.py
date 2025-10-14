@@ -13,8 +13,6 @@ class Profile(models.Model):
 
     def __str__(self):
         return f'Profile of {self.user.username}'
-    
-    
 class Post(models.Model):
     class Status(models.TextChoices):
         DRAFT = ('DF', 'Draft')
@@ -38,11 +36,8 @@ class Post(models.Model):
         indexes = [
             models.Index(fields=['-publish']),
         ]
-    
     def __str__(self):
         return self.title
-    
-    
 class Category(models.Model):
     category_name = models.CharField(max_length=20, null=True, blank=True)
         
