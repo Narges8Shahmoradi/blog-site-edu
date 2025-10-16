@@ -4,6 +4,8 @@ django-admin-honeypot @ git+https://github.com/dmpayton/django-admin-honeypot.gi
 django-ipware==7.0.1
 django-ratelimit==4.1.0
 djangorestframework==3.16.1
+djangorestframework_simplejwt==5.5.1
+PyJWT==2.10.1
 python-ipware==3.0.0
 sqlparse==0.5.3
 tzdata==2025.2
