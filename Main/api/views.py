@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from ..models import Post, Category
-from .serializers import PostSerializer, CategorySerializer
+from ..models import Post, Category, Profile
+from .serializers import PostSerializer, CategorySerializer, ProfileSerializer
 
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
@@ -13,3 +13,8 @@ class PostViewSet(viewsets.ModelViewSet):
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+class ProfileViewset(viewsets.ModelViewSet):
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
+    
