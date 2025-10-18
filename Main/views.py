@@ -1,21 +1,15 @@
 from django.http import HttpResponse
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from .models import Post
 
 def post_list(request):
-    # posts = Post.objects.all()
-    # post_titles = [post.title for post in posts]
+    posts = Post.objects.all()
+    post_titles = [post.title for post in posts]
     return HttpResponse('welcome')
 
-# def post_detail(request, pk):
-#     try:
-#         post = Post.objects.get(pk=pk)
-#     except Post.DoesNotExist:
-#         return HttpResponse(f"Error: Post with ID {pk} not found.", status=404)
-#     return HttpResponse(f"Post Detail Page: Title: {post.title} | ID: {post.pk}")
-
-
-
-def post_list(request):
-    posts = Post.objects.all() 
-    return render(request, 'blog/post_list.html', {'posts': posts})
+def post_detail(request, pk):
+    try:
+        post = Post.objects.get(pk=pk)
+    except Post.DoesNotExist:
+        return HttpResponse(f"Error: Post with ID {pk} not found.", status=404)
+    return HttpResponse(f"Post Detail Page: Title: {post.title} | ID: {post.pk}")
