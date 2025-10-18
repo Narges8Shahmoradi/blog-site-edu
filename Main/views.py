@@ -4,7 +4,7 @@ from .models import Post
 
 def post_list(request):
     posts = Post.objects.all()
-    post_titles = [post.title for post in posts] # فرض می‌کنیم مدل شما فیلد title دارد
+    post_titles = [post.title for post in posts]
     return HttpResponse(f"List of Posts: {', '.join(post_titles)}")
 
 def post_detail(request, pk):
