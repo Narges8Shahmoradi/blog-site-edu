@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from ..models import Post, Category, Profile
 
-class UserSerializers(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         #fields = '__all__'
@@ -10,7 +10,7 @@ class UserSerializers(serializers.ModelSerializer):
             'phone_number',
             'birth_date',
         ] 
-class PostSerializers(serializers.ModelSerializer):
+class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = [
@@ -21,7 +21,7 @@ class PostSerializers(serializers.ModelSerializer):
            'created',
            'status',
         ]
-class CategorySerializers(serializers.ModelSerializer):
+class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = [

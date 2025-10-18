@@ -43,6 +43,15 @@ class Category(models.Model):
         
     def __str__(self):
         return self.category_name   
-  
-  
+class UserSession(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    refresh_token = models.CharField(max_length=500)  
+    device = models.CharField(max_length=100, blank=True)  
+    browser = models.CharField(max_length=100, blank=True) 
+    ip_address = models.CharField(max_length=45, blank=True)  
+    login_time = models.DateTimeField(auto_now_add=True)
+    is_active = models.BooleanField(default=True) 
+
+    def __str__(self):
+        return f"{self.user.username} - {self.device} - {self.browser}"  
           
