@@ -47,8 +47,8 @@ class PostSerializer(serializers.ModelSerializer):
             'publish',
             'created',
             'status',
-            'comments',  # لیست کامنت‌ها
-            'comments_count',  # تعداد کامنت‌ها
+            'comments',
+            'comments_count', 
         ]
 
     def get_comments_count(self, obj):
