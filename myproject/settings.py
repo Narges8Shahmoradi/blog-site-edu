@@ -142,3 +142,28 @@ SIMPLE_JWT = {
     'BLACKLIST_AFTER_ROTATION': True,
     'SIGNING_KEY': 'lmyoQIiURXsOZo8pv6tLJllei2Mtr0T7LU3qN34ptlP',  
 }
+
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'formatters': {
+#         'honeypot_formatter': {
+#             'format': '[%(asctime)s] HONEYPOT %(levelname)s: %(message)s',
+#         },
+#     },
+#     'handlers': {
+#         'honeypot_file': {
+#             'level': 'INFO',
+#             'class': 'logging.FileHandler',
+#             'filename': os.path.join(BASE_DIR, 'logs', 'honeypot.log'),
+#             'formatter': 'honeypot_formatter',
+#         },
+#     },
+#     'loggers': {
+#         'admin_honeypot': {
+#             'handlers': ['honeypot_file'],
+#             'level': 'INFO',
+#             'propagate': False,
+#         },
+#     },
+# }
