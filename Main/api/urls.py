@@ -12,6 +12,7 @@ router.register(r'posts', PostViewSet)
 router.register(r'comments', CommentViewSet)
 router.register(r'categories', CategoryViewSet)
 router.register(r'profiles', ProfileViewset)
+
 urlpatterns = [
     path('', include(router.urls)),
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
